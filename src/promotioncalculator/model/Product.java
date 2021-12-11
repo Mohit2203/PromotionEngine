@@ -2,21 +2,20 @@ package promotioncalculator.model;
 
 public abstract class Product {
 
-    private Integer skuIDs;
+    private String skuIDs;
 
-    private Float price;
-
-    private String skuName;
-
-    public abstract Integer getTotalPrice(Integer skuIDs, Float price);
-
-    public Integer getSkuIDs() {
+    public String getSkuIDs() {
         return skuIDs;
     }
 
-    public void setSkuIDs(Integer skuIDs) {
+    public void setSkuIDs(String skuIDs) {
         this.skuIDs = skuIDs;
     }
+
+    private Float price;
+
+
+    public abstract Float getTotalPrice(Float price, String skuIDs );
 
     public Float getPrice() {
         return price;
@@ -26,11 +25,5 @@ public abstract class Product {
         this.price = price;
     }
 
-    public String getSkuName() {
-        return skuName;
-    }
 
-    public void setSkuName(String skuName) {
-        this.skuName = skuName;
-    }
 }

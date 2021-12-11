@@ -7,12 +7,14 @@ import java.util.List;
 public class ProductOrder {
 
     private Integer quantityOrder;
-    private List<Product> products;
+    public String skuIDsOfOrder;
 
+    public String getSkuIDsOfOrder() {
+        return skuIDsOfOrder;
+    }
 
-    public ProductOrder(Integer quantityOrder, List<Product> products) {
-        this.quantityOrder = quantityOrder;
-        this.products = products;
+    public void setSkuIDsOfOrder(String skuIDsOfOrder) {
+        this.skuIDsOfOrder = skuIDsOfOrder;
     }
 
     public Integer getQuantityOrder() {
@@ -23,11 +25,4 @@ public class ProductOrder {
         this.quantityOrder = quantityOrder;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
 }

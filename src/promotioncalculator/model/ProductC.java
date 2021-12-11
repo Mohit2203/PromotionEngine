@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ProductC extends Product{
     @Override
-    public Integer getTotalPrice(Integer skuIDs, Float price) {
+    public Float getTotalPrice(Float price, String id) {
         List<ProductOrder>  productOrders = new ArrayList<>();
 
         return null;
