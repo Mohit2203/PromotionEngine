@@ -1,8 +1,6 @@
 package promotioncalculator.model;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 
 public class ProductA extends Product {
@@ -12,7 +10,7 @@ public class ProductA extends Product {
     public BigDecimal getTotalPrice(Map<String, Integer> productOrders) {
         int quotient;
         int remainder;
-        BigDecimal price = new BigDecimal(0);
+        BigDecimal price;
         int quantity = productOrders.get("A");
         if (quantity > 2) {
             quotient = quantity / 3;
@@ -22,7 +20,6 @@ public class ProductA extends Product {
         } else {
             price = new BigDecimal(50);
         }
-      //  System.out.println("priceValue A" + price);
         return price;
     }
 }
