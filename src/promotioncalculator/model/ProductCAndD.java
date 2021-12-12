@@ -11,8 +11,8 @@ public class ProductCAndD extends Product {
         BigDecimal price = new BigDecimal(0);
         int quantityC = Optional.ofNullable(productOrders.get("C")).orElse(0);
         int quantityD = Optional.ofNullable(productOrders.get("D")).orElse(0);
-        int priceC = 0;
-        int priceD = 0;
+        int priceC;
+        int priceD;
         if (quantityC == quantityD && quantityD > 0) {
             return BigDecimal.valueOf(quantityD * 30);
 

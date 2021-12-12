@@ -4,6 +4,7 @@ import org.junit.*;
 import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 import promotioncalculator.model.ProcessingOrder;
+
 import static org.junit.Assert.assertEquals;
 
 import java.math.BigDecimal;
@@ -13,14 +14,15 @@ import java.util.Map;
 @RunWith(JUnit4.class)
 public class ProcessingOrderTest {
     ProcessingOrder order = new ProcessingOrder();
-    Map<String, Integer> map  = new HashMap<>();
+    Map<String, Integer> map = new HashMap<>();
 
     @BeforeClass
-    public static void setUpBeforeClass() throws Exception {
+    public static void setUpBeforeClass() {
         System.out.println("before class");
     }
+
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         System.out.println("before");
     }
 
@@ -48,17 +50,18 @@ public class ProcessingOrderTest {
         map.put("A", 3);
         map.put("B", 5);
         map.put("C", 1);
-        map.put("D",1);
+        map.put("D", 1);
         BigDecimal totalOrderCost = order.getTotalOrderCost(map);
         assertEquals(280, totalOrderCost.intValue());
     }
+
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
         System.out.println("after");
     }
 
     @AfterClass
-    public static void tearDownAfterClass() throws Exception {
+    public static void tearDownAfterClass() {
         System.out.println("after class");
     }
 }
