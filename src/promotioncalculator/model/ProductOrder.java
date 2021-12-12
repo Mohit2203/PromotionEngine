@@ -1,13 +1,14 @@
 package promotioncalculator.model;
 
-import promotioncalculator.model.Product;
-
-import java.util.List;
-
 public class ProductOrder {
 
     private Integer quantityOrder;
     public String skuIDsOfOrder;
+
+    public ProductOrder(Integer quantityOrder, String skuIDsOfOrder) {
+        this.quantityOrder = quantityOrder;
+        this.skuIDsOfOrder = skuIDsOfOrder;
+    }
 
     public String getSkuIDsOfOrder() {
         return skuIDsOfOrder;
