@@ -1,32 +1,19 @@
 package promotioncalculator.model;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.math.BigDecimal;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        ProductA a = new ProductA();
+        Map<String, Integer> map = new HashMap<>();
+        // map.put("A", 3);
+        //  map.put("B", 5);
+        // map.put("C", 2);
+        map.put("D", 2);
 
-        ProductOrder productOrders = new ProductOrder(7,"A");
-
-        List<ProductOrder> productOrderList = new ArrayList<>();
-        productOrderList.add(productOrders);
-        System.out.println("Value"+a.getTotalPrice("A",productOrderList));
-
-        ProductB b = new ProductB();
-
-        ProductOrder productOrdersB = new ProductOrder(5,"B");
-
-        List<ProductOrder> productOrderListB = new ArrayList<>();
-        productOrderListB.add(productOrdersB);
-        System.out.println("Value of B"+b.getTotalPrice("B",productOrderListB));
-
-        ProductC c = new ProductC();
-
-        ProductOrder productOrdersC = new ProductOrder(5,"C");
-
-        List<ProductOrder> productOrderListC = new ArrayList<>();
-        productOrderListC.add(productOrdersC);
-        System.out.println("Value of C"+c.getTotalPrice("C",productOrderListC));
+        ProcessingOrder order = new ProcessingOrder();
+        BigDecimal totalOrderCost = order.getTotalOrderCost(map);
+        System.out.println("Value of Items" + totalOrderCost);
     }
 }
